@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>net</display-name>
+	<welcome-file-list>
+		<welcome-file>login</welcome-file>
+	</welcome-file-list>
+
+
+	<servlet>
+		<servlet-name>RegistServlet</servlet-name>
+		<servlet-class>edu.itstudy.control.RegistServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>edu.itstudy.control.LoginServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>LoginOutServlet</servlet-name>
+		<servlet-class>edu.itstudy.control.LoginOutServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>forgetPassword</servlet-name>
+		<servlet-class>edu.itstudy.control.forgetPassword</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>indexServlet</servlet-name>
+		<servlet-class>edu.itstudy.control.indexServlet</servlet-class>
+	</servlet>
+
+
+	<servlet>
+		<servlet-name>productOfServlet</servlet-name>
+		<servlet-class>edu.itstudy.control.productOfServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>productInfoServlet</servlet-name>
+		<servlet-class>edu.itstudy.control.productInfoServlet</servlet-class>
+	</servlet>
+	 
+
+	 
+	 <servlet>
+		<servlet-name>UpdateServlet</servlet-name>
+		<servlet-class>edu.itstudy.control.UpdateServlet</servlet-class>
+	</servlet>
+	
+	 <servlet>
+		<servlet-name>DeleteServlet</servlet-name>
+		<servlet-class>edu.itstudy.control.DeleteServlet</servlet-class>
+	</servlet>
+	
+	 <servlet>
+		<servlet-name>addProductServlet</servlet-name>
+		<servlet-class>edu.itstudy.control.addProductServlet</servlet-class>
+	</servlet>
+
+	<!-- 用户注册 -->
+	<servlet-mapping>
+		<servlet-name>RegistServlet</servlet-name>
+		<url-pattern>/register</url-pattern>
+	</servlet-mapping>
+
+	<!-- 登录 -->
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+
+	<!-- 注銷 -->
+	<servlet-mapping>
+		<servlet-name>LoginOutServlet</servlet-name>
+		<url-pattern>/loginout</url-pattern>
+	</servlet-mapping>
+	<!-- 忘记密码 -->
+	<servlet-mapping>
+		<servlet-name>forgetPassword</servlet-name>
+		<url-pattern>/forgetPassword</url-pattern>
+	</servlet-mapping>
+	<!-- 首页 -->
+	<servlet-mapping>
+		<servlet-name>indexServlet</servlet-name>
+		<url-pattern>/index</url-pattern>
+	</servlet-mapping>
+
+	<!-- 物流页面 -->
+	<servlet-mapping>
+		<servlet-name>productOfServlet</servlet-name>
+		<url-pattern>/productControl</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>productInfoServlet</servlet-name>
+		<url-pattern>/productInfo</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>UpdateServlet</servlet-name>
+		<url-pattern>/productUpdate</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>addProductServlet</servlet-name>
+		<url-pattern>/addproduct</url-pattern>
+	</servlet-mapping>
+	
+		<servlet-mapping>
+		<servlet-name>DeleteServlet</servlet-name>
+		<url-pattern>/productdel</url-pattern>
+	</servlet-mapping>
+</web-app>
