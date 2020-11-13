@@ -186,6 +186,7 @@ public class IUserdaoImpl implements IUserDao {
 //				userbean user = new userbean(uid,name,null,null,email,brotherName);
 				medicinebean medicineInfomation  = new medicinebean(medicineIntroId,medicineName,medicineIntroduce,isOTC,dosage,img);
 				//添加至list，作为返回值
+//				System.out.println("这里真的拿到了medicin信息了么？" + medicineInf);?
 				list.add(medicineInfomation);
 			}
 		} catch (SQLException e) {

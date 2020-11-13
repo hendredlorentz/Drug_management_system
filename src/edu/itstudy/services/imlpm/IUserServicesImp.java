@@ -52,6 +52,7 @@ public class IUserServicesImp implements IUserServices{
 //	药品表
 	public List<medicinebean> medicineInfo(){
 		List<medicinebean> Mlist = iuserdao.getMedicineInfo();
+		System.out.println("拿到药品信息了！！");
 		if(null == Mlist || Mlist.size() == 0){
 			System.out.println("这里是药品为null");
 			return null;

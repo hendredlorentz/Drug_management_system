@@ -24,6 +24,7 @@ public class indexServlet extends HttpServlet {
         List<productbean> list = iuserServices.information();//拿到Dao中的list
         List<userbean> userList = iuserServices.UserInfo(); //拿到用户list
         List<medicinebean> medicineInformation = iuserServices.medicineInfo(); // 拿到药品信息
+//        System.out.println(medicineInformation+"????");
 //        System.out.println("????"+use);
 
         request.setAttribute("list", list);//将list存入命为“list”中

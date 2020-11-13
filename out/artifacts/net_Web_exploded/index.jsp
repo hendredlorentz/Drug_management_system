@@ -125,6 +125,14 @@
     </a>
 </div>
 <!-- 轮播图结束 -->
+
+
+<%--测试后台数据是否存在--%>
+<%--<div style="background-color:red;height: 20px">--%>
+<%--    <p>${medicineList[0].medicineName}</p>--%>
+<%--</div>--%>
+
+
 <!-- 巨幕开始 -->
 <div class="jumbotron" style="margin-top: 30px;margin-right: 10px;margin-left:10px;">
 
@@ -146,17 +154,17 @@
                         <h2 class="modal-title" id="myModalLabel">联系方式</h2>
                     </div>
                     <div class="modal-body ">
-                        <p style="font-size: 17px; margin-top: 30px;">电话：17608430056</p>
+    <p style="font-size: 17px; margin-top: 30px;">电话：17608430056</p>
 
-                        <p style="font-size: 17px;">住址：长沙市长沙理工大学</p>
+    <p style="font-size: 17px;">住址：长沙市长沙理工大学</p>
 
-                    </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
-                </div>
-            </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
+</div>
+</div>
 <!-- /.modal-content -->
-        </div>
+</div>
 <!-- /.modal -->
 </div>
 <!-- 介绍框结束 -->
@@ -174,206 +182,39 @@
 
 <%--一行三个卡片--%>
 <div class="ui four column grid">
-    <div class="column">
-        <div class="ui special cards ">
-            <div class="card">
-                <div class="blurring dimmable image">
-                    <div class="ui dimmer">
+    <%--    --%>
+    <c:forEach var="medicineList" items="${medicineList}" varStatus="i">
+        <div class="column">
+            <%--        --%>
+            <div class="ui special cards ">
+                <%--            --%>
+
+                    <div class="card">
+                        <div class="blurring dimmable image">
+                            <div class="ui dimmer">
+                                <div class="content">
+                                    <div class="center">
+                                        <div class="ui inverted button">了解更多</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="${medicineList.img}" class="showit">
+                        </div>
                         <div class="content">
-                            <div class="center">
-                                <div class="ui inverted button">了解更多</div>
+                            <a class="header">${medicineList.medicineName}</a>
+                            <div class="meta">
+                                <span class="date">Created in 11 2020</span>
                             </div>
                         </div>
-                    </div>
-                    <img src="./static/image/39.png" class="showit">
-                </div>
-                <div class="content">
-                    <a class="header">三九感冒灵</a>
-                    <div class="meta">
-                        <span class="date">Created in 11 2020</span>
-                    </div>
-                </div>
-                <div class="extra content">
-                    <a><i class="users icon"></i> 2 warehouse </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="column">
-        <div class="ui special cards ">
-            <div class="card">
-                <div class="blurring dimmable image">
-                    <div class="ui dimmer">
-                        <div class="content">
-                            <div class="center">
-                                <div class="ui inverted button">了解更多</div>
-                            </div>
+                        <div class="extra content">
+                            <a><i class="users icon"></i> 2 warehouse </a>
                         </div>
                     </div>
-                    <img src="./static/image/amoxilin.png" class="showit">
-                </div>
-                <div class="content">
-                    <a class="header">阿莫西林</a>
-                    <div class="meta">
-                        <span class="date">Created in 11 2020</span>
-                    </div>
-                </div>
-                <div class="extra content">
-                    <a><i class="users icon"></i> 2 warehouse </a>
-                </div>
             </div>
+            <%--        --%>
         </div>
-    </div>
-    <div class="column">
-        <div class="ui special cards ">
-            <div class="card">
-                <div class="blurring dimmable image">
-                    <div class="ui dimmer">
-                        <div class="content">
-                            <div class="center">
-                                <div class="ui inverted button">了解更多</div>
-                            </div>
-                        </div>
-                    </div>
-                    <img src="./static/image/anfenwan.png" class="showit">
-                </div>
-                <div class="content">
-                    <a class="header">氨酚烷</a>
-                    <div class="meta">
-                        <span class="date">Created in 11 2020</span>
-                    </div>
-                </div>
-                <div class="extra content">
-                    <a><i class="users icon"></i> 2 warehouse </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="column">
-        <div class="ui special cards ">
-            <div class="card">
-                <div class="blurring dimmable image">
-                    <div class="ui dimmer">
-                        <div class="content">
-                            <div class="center">
-                                <div class="ui inverted button">了解更多</div>
-                            </div>
-                        </div>
-                    </div>
-                    <img src="./static/image/banlangen.png" class="showit">
-                </div>
-                <div class="content">
-                    <a class="header">板蓝根</a>
-                    <div class="meta">
-                        <span class="date">Created in 11 2020</span>
-                    </div>
-                </div>
-                <div class="extra content">
-                    <a><i class="users icon"></i> 2 warehouse </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="column">
-        <div class="ui special cards ">
-            <div class="card">
-                <div class="blurring dimmable image">
-                    <div class="ui dimmer">
-                        <div class="content">
-                            <div class="center">
-                                <div class="ui inverted button">了解更多</div>
-                            </div>
-                        </div>
-                    </div>
-                    <img src="./static/image/diao.png" class="showit">
-                </div>
-                <div class="content">
-                    <a class="header">心血康</a>
-                    <div class="meta">
-                        <span class="date">Created in 11 2020</span>
-                    </div>
-                </div>
-                <div class="extra content">
-                    <a><i class="users icon"></i> 2 warehouse </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="column">
-        <div class="ui special cards ">
-            <div class="card">
-                <div class="blurring dimmable image">
-                    <div class="ui dimmer">
-                        <div class="content">
-                            <div class="center">
-                                <div class="ui inverted button">了解更多</div>
-                            </div>
-                        </div>
-                    </div>
-                    <img src="./static/image/toubaolading.png" class="showit">
-                </div>
-                <div class="content">
-                    <a class="header">头孢拉丁</a>
-                    <div class="meta">
-                        <span class="date">Created in 11 2020</span>
-                    </div>
-                </div>
-                <div class="extra content">
-                    <a><i class="users icon"></i> 2 warehouse </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="column">
-        <div class="ui special cards ">
-            <div class="card">
-                <div class="blurring dimmable image">
-                    <div class="ui dimmer">
-                        <div class="content">
-                            <div class="center">
-                                <div class="ui inverted button">了解更多</div>
-                            </div>
-                        </div>
-                    </div>
-                    <img src="./static/image/yimuwan.png" class="showit">
-                </div>
-                <div class="content">
-                    <a class="header">益母丸</a>
-                    <div class="meta">
-                        <span class="date">Created in 11 2020</span>
-                    </div>
-                </div>
-                <div class="extra content">
-                    <a><i class="users icon"></i> 2 warehouse </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="column">
-        <div class="ui special cards ">
-            <div class="card">
-                <div class="blurring dimmable image">
-                    <div class="ui dimmer">
-                        <div class="content">
-                            <div class="center">
-                                <div class="ui inverted button">了解更多</div>
-                            </div>
-                        </div>
-                    </div>
-                    <img src="./static/image/bunuofen.png" class="showit">
-                </div>
-                <div class="content">
-                    <a class="header">布诺芬</a>
-                    <div class="meta">
-                        <span class="date">Created in 11 2020</span>
-                    </div>
-                </div>
-                <div class="extra content">
-                    <a><i class="users icon"></i> 2 warehouse </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    </c:forEach>
+
 </div>
 
 
