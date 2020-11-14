@@ -278,6 +278,34 @@ public class IUserdaoImpl implements IUserDao {
 
 	}
 
+	public medicinebean getMedicineById(int id){
+		Connection conn = DBContil.getConn();
+		String sql = "select medicineName,medicineIntroduce,isOTC,dosage from medicineintroduce where medicineIntroId = ?";
+		PreparedStatement pstmt = null;
+		medicinebean medicine = null;
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, id);
+			ResultSet rs = pstmt.executeQuery();
+			if (rs.next()) {
+				String medicineName = rs.getString(1);
+				String medicineIntroduce = rs.getString(2);
+				int isOTC = rs.getInt(3);
+				String dosage = rs.getString(4);
+
+//				medicine = new productbean(pid, productID, price, begin, dest, jiphone, dephone, isDeal, time, Date);
+				medicine = new medicinebean(id,medicineName,medicineIntroduce,isOTC,dosage,null);
+
+			}
+
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		}
+
+		return medicine;
+	}
+
 	@Override
 	public int updateproduct(productbean product) {
 		Connection conn = DBContil.getConn();

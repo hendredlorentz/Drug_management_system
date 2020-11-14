@@ -17,6 +17,7 @@ public interface IUserServices {
 	public List<medicinebean> medicineInfo();
 	public List<productbean> searchInfo(productbean product);
 	public productbean getProductById(int id);
+	public  medicinebean getMedicineById(int id);
 	public boolean updateProduct(productbean product);
 	public boolean delete(int uid,int isD);
 	public boolean addProduct(productbean product);

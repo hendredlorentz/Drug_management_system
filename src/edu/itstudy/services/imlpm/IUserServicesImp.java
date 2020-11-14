@@ -73,6 +73,10 @@ public class IUserServicesImp implements IUserServices{
 		productbean product  = iuserdao.getProductById(id);
 		return product;
 	}
+	public  medicinebean getMedicineById(int id){
+		medicinebean medicine = iuserdao.getMedicineById(id);
+		return medicine;
+	}
 	@Override
 	public boolean updateProduct(productbean product) {
 		int i = iuserdao.updateproduct(product);

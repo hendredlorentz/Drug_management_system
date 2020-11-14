@@ -185,33 +185,33 @@
     <%--    --%>
     <c:forEach var="medicineList" items="${medicineList}" varStatus="i">
         <div class="column">
-            <%--        --%>
+                <%--        --%>
             <div class="ui special cards ">
-                <%--            --%>
+                    <%--            --%>
 
-                    <div class="card">
-                        <div class="blurring dimmable image">
-                            <div class="ui dimmer">
-                                <div class="content">
-                                    <div class="center">
-                                        <div class="ui inverted button">了解更多</div>
-                                    </div>
+                <div class="card">
+                    <div class="blurring dimmable image">
+                        <div class="ui dimmer">
+                            <div class="content">
+                                <div class="center">
+                                    <a class="ui inverted button" href="productInfo?uid=122">了解更多</a>
                                 </div>
                             </div>
-                            <img src="${medicineList.img}" class="showit">
                         </div>
-                        <div class="content">
-                            <a class="header">${medicineList.medicineName}</a>
-                            <div class="meta">
-                                <span class="date">Created in 11 2020</span>
-                            </div>
-                        </div>
-                        <div class="extra content">
-                            <a><i class="users icon"></i> 2 warehouse </a>
+                        <img src="${medicineList.img}" class="showit">
+                    </div>
+                    <div class="content">
+                        <a class="header">${medicineList.medicineName}</a>
+                        <div class="meta">
+                            <span class="date">Created in 11 2020</span>
                         </div>
                     </div>
+                    <div class="extra content">
+                        <a><i class="users icon"></i> 2 warehouse </a>
+                    </div>
+                </div>
             </div>
-            <%--        --%>
+                <%--        --%>
         </div>
     </c:forEach>
 
@@ -240,6 +240,8 @@
         <!-- /.modal-content -->
     </div>
 </div>
+
+
 
 
 <hr style="margin:20px;background-color:rgba(238, 238, 238, 0.637);height:3px;border:none;" />

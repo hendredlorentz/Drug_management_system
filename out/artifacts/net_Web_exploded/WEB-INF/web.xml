@@ -44,8 +44,11 @@
 		<servlet-name>productInfoServlet</servlet-name>
 		<servlet-class>edu.itstudy.control.productInfoServlet</servlet-class>
 	</servlet>
-	 
 
+	<servlet>
+		<servlet-name>medicineInfoServlet</servlet-name>
+		<servlet-class>edu.itstudy.control.medicineInfoServlet</servlet-class>
+	</servlet>
 	 
 	 <servlet>
 		<servlet-name>UpdateServlet</servlet-name>
@@ -100,7 +103,12 @@
 		<servlet-name>productInfoServlet</servlet-name>
 		<url-pattern>/productInfo</url-pattern>
 	</servlet-mapping>
-	
+
+	<servlet-mapping>
+		<servlet-name>medicineInfoServlet</servlet-name>
+		<url-pattern>/medicineInfo</url-pattern>
+	</servlet-mapping>
+
 	<servlet-mapping>
 		<servlet-name>UpdateServlet</servlet-name>
 		<url-pattern>/productUpdate</url-pattern>

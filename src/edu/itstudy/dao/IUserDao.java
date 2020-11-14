@@ -16,6 +16,8 @@ public interface IUserDao {
 	public List<medicinebean> getMedicineInfo();
 	public List<productbean> getSearchInfo(productbean product);
 	public productbean getProductById(int id);
+
+	public medicinebean getMedicineById(int id);
 	public int updateproduct(productbean product);
 	public int delete(int uid,int isD);
 	public int addProduct(productbean product);
