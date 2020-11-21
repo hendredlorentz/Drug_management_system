@@ -34,12 +34,22 @@
 		<servlet-class>edu.itstudy.control.indexServlet</servlet-class>
 	</servlet>
 
+	<servlet>
+		<servlet-name>userServlet</servlet-name>
+		<servlet-class>edu.itstudy.control.userServlet</servlet-class>
+	</servlet>
 
 	<servlet>
 		<servlet-name>productOfServlet</servlet-name>
 		<servlet-class>edu.itstudy.control.productOfServlet</servlet-class>
 	</servlet>
-	
+
+
+	<servlet>
+		<servlet-name>medicineOfServlet</servlet-name>
+		<servlet-class>edu.itstudy.control.medicineOfServlet</servlet-class>
+	</servlet>
+
 	<servlet>
 		<servlet-name>productInfoServlet</servlet-name>
 		<servlet-class>edu.itstudy.control.productInfoServlet</servlet-class>
@@ -98,7 +108,17 @@
 		<servlet-name>productOfServlet</servlet-name>
 		<url-pattern>/productControl</url-pattern>
 	</servlet-mapping>
-	
+
+	<servlet-mapping>
+		<servlet-name>medicineOfServlet</servlet-name>
+		<url-pattern>/medicineControl</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>userServlet</servlet-name>
+		<url-pattern>/userControlOf</url-pattern>
+	</servlet-mapping>
+
 	<servlet-mapping>
 		<servlet-name>productInfoServlet</servlet-name>
 		<url-pattern>/productInfo</url-pattern>

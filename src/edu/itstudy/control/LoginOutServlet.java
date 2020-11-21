@@ -21,8 +21,8 @@ public class LoginOutServlet extends HttpServlet {
 
 		request.getSession().removeAttribute("name");
 		response.sendRedirect("index.jsp");
-		
 
+		System.out.println("×¢Ïú²âÊÔ");
 	}
 
 	@Override

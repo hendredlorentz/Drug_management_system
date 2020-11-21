@@ -7,7 +7,7 @@ public class medicinebean {
     private int isOTC;
     private String dosage;
     private String img;
-
+    private int isD;
 
     public medicinebean(int medicineId, String medicineName, String medicineIntroduce, int isOTC, String dosage , String img) {
         this.medicineId = medicineId;
@@ -17,12 +17,36 @@ public class medicinebean {
         this.dosage = dosage;
         this.img = img;
     }
+
+    public medicinebean(int medicineId, String medicineName, String medicineIntroduce, int isOTC, String dosage, String img, int isD) {
+        this.medicineId = medicineId;
+        this.medicineName = medicineName;
+        this.medicineIntroduce = medicineIntroduce;
+        this.isOTC = isOTC;
+        this.dosage = dosage;
+        this.img = img;
+        this.isD = isD;
+    }
+
+    public medicinebean(String medicineName, String dosage) {
+        this.medicineName = medicineName;
+        this.dosage = dosage;
+    }
+
     public String getImg() {
         return img;
     }
 
     public void setImg(String img) {
         this.img = img;
+    }
+
+    public int getIsD() {
+        return isD;
+    }
+
+    public void setIsD(int isD) {
+        this.isD = isD;
     }
 
     public int getMedicineId() {

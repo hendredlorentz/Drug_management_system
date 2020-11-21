@@ -12,10 +12,53 @@ public class userbean {
 	private String email;
 	private String brotherName;
 	private int isAdmin;
+
+	private int isD;
+	private String workerID;
+	public userbean(int uid, String name, String password, String apassword, String email, String brotherName, int isAdmin, String workerID) {
+		this.uid = uid;
+		this.name = name;
+		this.password = password;
+		Apassword = apassword;
+		this.email = email;
+		this.brotherName = brotherName;
+		this.isAdmin = isAdmin;
+		this.workerID = workerID;
+	}
+
+
+
 	public userbean() {
 		
 	}
-	
+
+	public userbean(String name, String password, String apassword, String email, String brotherName, int isAdmin, int isD, String workerID) {
+		this.name = name;
+		this.password = password;
+		Apassword = apassword;
+		this.email = email;
+		this.brotherName = brotherName;
+		this.isAdmin = isAdmin;
+		this.isD = isD;
+		this.workerID = workerID;
+	}
+
+	public userbean(int uid, String name, String password, String apassword, String email, String brotherName, int isAdmin, int isD, String workerID) {
+		this.uid = uid;
+		this.name = name;
+		this.password = password;
+		Apassword = apassword;
+		this.email = email;
+		this.brotherName = brotherName;
+		this.isAdmin = isAdmin;
+		this.isD = isD;
+		this.workerID = workerID;
+	}
+
+	public userbean(int uid, String name) {
+		this.uid = uid;
+		this.name = name;
+	}
 	public userbean(int uid, String name, String password) {
 		this.uid = uid;
 		this.name = name;
@@ -38,6 +81,22 @@ public class userbean {
 		this.email = email;
 		this.brotherName = brotherName;
 	}
+	public String getWorkerID() {
+		return workerID;
+	}
+
+	public void setWorkerID(String workerID) {
+		this.workerID = workerID;
+	}
+
+	public int getIsD() {
+		return isD;
+	}
+
+	public void setIsD(int isD) {
+		this.isD = isD;
+	}
+
 	public int getUid() {
 		return uid;
 	}

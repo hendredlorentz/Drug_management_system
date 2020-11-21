@@ -15,6 +15,8 @@ public interface IUserDao {
 //	public List<userbean> getSpecialUserInfo();
 	public List<medicinebean> getMedicineInfo();
 	public List<productbean> getSearchInfo(productbean product);
+	public List<userbean> getUserSearchInfo(userbean user);
+	public List<medicinebean> getMedicineSearchInfo(medicinebean medicine);
 	public productbean getProductById(int id);
 
 	public medicinebean getMedicineById(int id);

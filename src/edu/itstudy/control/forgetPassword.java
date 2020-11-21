@@ -19,6 +19,7 @@ public class forgetPassword extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");//防止乱码
+		System.out.println("忘记密码测试");
 		String name = request.getParameter("name");//得到name
 		String brotherName = request.getParameter("brotherName");//获取好兄弟姓名
 

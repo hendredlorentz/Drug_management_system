@@ -16,6 +16,9 @@ public interface IUserServices {
 	public List<userbean> UserInfo();
 	public List<medicinebean> medicineInfo();
 	public List<productbean> searchInfo(productbean product);
+//	searchUserInfo
+	public List<userbean> searchUserInfo(userbean user);
+	public List<medicinebean> searchMedicineInfo(medicinebean medicine);
 	public productbean getProductById(int id);
 	public  medicinebean getMedicineById(int id);
 	public boolean updateProduct(productbean product);

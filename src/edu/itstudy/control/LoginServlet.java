@@ -20,7 +20,7 @@ public class LoginServlet extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		String name = request.getParameter("name");
 		String password = request.getParameter("password");
-		System.out.println("测试");
+		System.out.println("登录页面测试");
 //		System.out.println("这就是好兄弟？" + brotherName);
 		userbean user = new userbean(0, name, password,null,null,null,-1);
 //		System.out.println(user.getPassword());
@@ -33,11 +33,14 @@ public class LoginServlet extends HttpServlet {
 			request.getSession().setAttribute("isAdmin", userof.getIsAdmin());
 
 //			System.out.println(brotherName+"不会吧");
-			System.out.println("从userbean拿到的:   "+userof.getBrotherName() + userof.getEmail());
+//			System.out.println("从userbean拿到的:   "+userof.getBrotherName() + userof.getEmail());
 			request.getSession().setAttribute("name", name);
 			request.getSession().setAttribute("password",password);
 
 			response.sendRedirect("index");
+
+
+			return;
 		} else {
 			request.setAttribute("errorinfo", "用户名或密码输入错误");
 			request.getRequestDispatcher("login.jsp").forward(request, response);

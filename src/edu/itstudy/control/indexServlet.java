@@ -26,7 +26,7 @@ public class indexServlet extends HttpServlet {
         List<medicinebean> medicineInformation = iuserServices.medicineInfo(); // 拿到药品信息
 //        System.out.println(medicineInformation+"????");
 //        System.out.println("????"+use);
-
+        System.out.println("首页测试");
         request.setAttribute("list", list);//将list存入命为“list”中
         request.setAttribute("userList" , userList);
         request.setAttribute("medicineList" , medicineInformation);

@@ -30,11 +30,7 @@ public class IUserServicesImp implements IUserServices{
 
 	public List<productbean> information(){
 		List<productbean> list = iuserdao.getAllinfos();
-		System.out.println("这不是有产品");
-
-
 		if(null == list || list.size() == 0) {
-			System.out.println("这里是产品表为null");
 			return null;
 		}
 		return list;
@@ -42,9 +38,7 @@ public class IUserServicesImp implements IUserServices{
 //	用户表
 	public List<userbean> UserInfo(){
 		List<userbean> list = iuserdao.getAllUserinfos();
-		System.out.println("这不是有用户？");
 		if(null == list||list.size() == 0){
-			System.out.println("这里是用户表为null");
 			return  null;
 		}
 		return list;
@@ -52,9 +46,7 @@ public class IUserServicesImp implements IUserServices{
 //	药品表
 	public List<medicinebean> medicineInfo(){
 		List<medicinebean> Mlist = iuserdao.getMedicineInfo();
-		System.out.println("拿到药品信息了！！");
 		if(null == Mlist || Mlist.size() == 0){
-			System.out.println("这里是药品为null");
 			return null;
 		}
 		return Mlist;
@@ -66,6 +58,26 @@ public class IUserServicesImp implements IUserServices{
 		if(null == list || list.size() == 0) {
 			return null;
 		}
+		return list ;
+	}
+
+	public List<userbean> searchUserInfo(userbean user) {
+		List<userbean> list = iuserdao.getUserSearchInfo(user);
+		if(null == list || list.size() == 0) {
+			System.out.println("寻找到的是个空的，啥都没有");
+			return null;
+		}
+		System.out.println("这才是找到了嘛！！");
+		return list ;
+	}
+
+	public List<medicinebean> searchMedicineInfo(medicinebean medicine) {
+		List<medicinebean> list = iuserdao.getMedicineSearchInfo(medicine);
+		if(null == list || list.size() == 0) {
+			System.out.println("寻找药品信息到的是个空的，啥都没有");
+			return null;
+		}
+		System.out.println("这才是找到了药品信息嘛！！");
 		return list ;
 	}
 	@Override

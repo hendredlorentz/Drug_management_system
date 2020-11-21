@@ -135,7 +135,7 @@ public class IUserdaoImpl implements IUserDao {
 	}
 //获取特定的用户信息
 //	public List<userbean> getSpecialUserInfo
-//	获取用户表
+//	获取用户表 getUserSearchInfo
 	@Override
 	public List<userbean> getAllUserinfos() {
 		Connection conn = DBContil.getConn();//初始化
@@ -182,11 +182,7 @@ public class IUserdaoImpl implements IUserDao {
 				String dosage = rs.getString("dosage");
 				String img = rs.getString("img");
 
-				//将数据拿出后进行productbean对象封装
-//				userbean user = new userbean(uid,name,null,null,email,brotherName);
 				medicinebean medicineInfomation  = new medicinebean(medicineIntroId,medicineName,medicineIntroduce,isOTC,dosage,img);
-				//添加至list，作为返回值
-//				System.out.println("这里真的拿到了medicin信息了么？" + medicineInf);?
 				list.add(medicineInfomation);
 			}
 		} catch (SQLException e) {
@@ -195,7 +191,97 @@ public class IUserdaoImpl implements IUserDao {
 		return list;
 	}
 
-	
+//	getUserSearchInfo
+	public List<userbean> getUserSearchInfo(userbean user) {
+		Connection conn = DBContil.getConn();//初始化
+		String sql = "select uid,name,email,brotherName,isAdmin,workerID from userinfo where isD=0 ";//对数据库数据进行查询
+		StringBuffer sb = new StringBuffer(sql);//转化为stringbuffer类型，方便动态sql
+		List<Object> params = new ArrayList<Object>();
+		//以下的三条if目的是判断输入框中内容是否为空，如果不为空，进行动态sql条件的附加。
+		if ( user.getWorkerID()!=null&&!"".equals(user.getWorkerID())) {
+			sb.append(" and workerID like ? ");
+			params.add("%" + user.getWorkerID() + "%");
+		}
+		if (user.getName() != null && !"".equals(user.getName())) {
+			sb.append(" and name like ? ");
+			params.add("%" + user.getName() + "%");
+		}
+
+		sql = sb.toString(); //将完整的String转化
+		PreparedStatement pstmt = null;
+		List<userbean> list = null;
+		try {
+			pstmt = conn.prepareStatement(sql);
+			for (int i = 0; i < params.size(); i++) {
+				pstmt.setObject(i + 1, params.get(i));//对list添加对象
+			}
+			ResultSet rs = pstmt.executeQuery();//拿到需要显示的内容
+			list = new ArrayList<userbean>();
+			while (rs.next()) {
+				//将需要显示的内容从rs 中取出。
+				int uid = rs.getInt(1);
+				String name = rs.getString(2);
+				String email = rs.getString(3);
+				String brotherName = rs.getString(4);
+				int isAdmin = rs.getInt(5);
+				String workerID = rs.getString(6);
+				//对象封装
+//				productbean product1 = new productbean(uid, productID, begin, dest, isDeal, riqi);
+//				userbean user1 = new userbean(uid,name,null,null,email,brotherName,isAdmin);
+				userbean user1 = new userbean(uid,name,null,null,email,brotherName,isAdmin,workerID);
+				list.add(user1);//添加至显示list
+
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return list;//返回
+	}
+	//获取药品信息表
+	public List<medicinebean> getMedicineSearchInfo(medicinebean medicine) {
+		Connection conn = DBContil.getConn();//初始化
+		String sql = "select medicineIntroId,medicineName,medicineIntroduce,isOTC,dosage from medicineintroduce where isD=0 ";//对数据库数据进行查询
+		StringBuffer sb = new StringBuffer(sql);//转化为stringbuffer类型，方便动态sql
+		List<Object> params = new ArrayList<Object>();
+		//以下的三条if目的是判断输入框中内容是否为空，如果不为空，进行动态sql条件的附加。
+		if ( medicine.getMedicineName()!=null&&!"".equals(medicine.getMedicineName())) {
+			sb.append(" and medicineName like ? ");
+			params.add("%" + medicine.getMedicineName() + "%");
+		}
+		if (medicine.getDosage() != null && !"".equals(medicine.getDosage())) {
+			sb.append(" and dosage like ? ");
+			params.add("%" + medicine.getDosage() + "%");
+		}
+
+		sql = sb.toString(); //将完整的String转化
+		PreparedStatement pstmt = null;
+		List<medicinebean> list = null;
+		try {
+			pstmt = conn.prepareStatement(sql);
+			for (int i = 0; i < params.size(); i++) {
+				pstmt.setObject(i + 1, params.get(i));//对list添加对象
+			}
+			ResultSet rs = pstmt.executeQuery();//拿到需要显示的内容
+			list = new ArrayList<medicinebean>();
+			while (rs.next()) {
+				//将需要显示的内容从rs 中取出。
+				int medicineIntroId = rs.getInt(1);
+				String medicineName = rs.getString(2);
+				String medicineIntroduce = rs.getString(3);
+				int isOTC = rs.getInt(4);
+				String dosage = rs.getString(5);
+				//对象封装
+//				productbean product1 = new productbean(uid, productID, begin, dest, isDeal, riqi);
+//				userbean user1 = new userbean(uid,name,null,null,email,brotherName,isAdmin);
+				medicinebean medicine1 = new medicinebean(medicineIntroId,medicineName,medicineIntroduce,isOTC,dosage,null);
+				list.add(medicine1);//添加至显示list
+
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return list;//返回
+	}
 	@Override
 	public List<productbean> getSearchInfo(productbean product) {
 		Connection conn = DBContil.getConn();//初始化
