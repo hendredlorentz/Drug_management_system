@@ -35,8 +35,8 @@
 	</servlet>
 
 	<servlet>
-		<servlet-name>userServlet</servlet-name>
-		<servlet-class>edu.itstudy.control.userServlet</servlet-class>
+		<servlet-name>userOfServlet</servlet-name>
+		<servlet-class>edu.itstudy.control.userOfServlet</servlet-class>
 	</servlet>
 
 	<servlet>
@@ -115,8 +115,8 @@
 	</servlet-mapping>
 
 	<servlet-mapping>
-		<servlet-name>userServlet</servlet-name>
-		<url-pattern>/userControlOf</url-pattern>
+		<servlet-name>userOfServlet</servlet-name>
+		<url-pattern>/userControl</url-pattern>
 	</servlet-mapping>
 
 	<servlet-mapping>

@@ -80,7 +80,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多功能
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="userControlOf" target="_blank">用户列表</a></li>
+                        <li><a href="productControl" target="_blank">用户列表</a></li>
                         <li><a href="medicineControl" target="_blank">药品介绍</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="#" target="_blank">药品仓库</a></li>

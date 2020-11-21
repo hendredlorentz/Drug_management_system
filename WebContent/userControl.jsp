@@ -59,7 +59,7 @@
         <body style=" padding-top: 70px;">
             <div class="container">
                 <h2 class="page-header">用户列表</h2>
-                <form class="form-inline" method="POST" action="userControlOf">
+                <form class="form-inline" method="POST" action="userControl">
                     <div class="form-group">
                         <label for="workerID">用户编号：</label>
                         <input type="text" class="form-control input-sm" id="workerID" name="workerID" placeholder="用户编号">
