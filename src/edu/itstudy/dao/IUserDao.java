@@ -19,7 +19,7 @@ public interface IUserDao {
 	public List<medicinebean> getMedicineSearchInfo(medicinebean medicine);
 	public productbean getProductById(int id);
 
-	public medicinebean getMedicineById(int id);
+	public medicinebean getMedicineById(String id);
 	public int updateproduct(productbean product);
 	public int delete(int uid,int isD);
 	public int addProduct(productbean product);

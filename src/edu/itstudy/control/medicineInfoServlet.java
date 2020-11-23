@@ -26,7 +26,7 @@ public class medicineInfoServlet extends HttpServlet {
 		}
 		//直接对拿到的uid作为函数参数进行查询
 //		medicinebean medicine = iuserServices.getProductById(Integer.parseInt(itemId));
-		medicinebean medicine = iuserServices.getMedicineById(Integer.parseInt(itemId));
+		medicinebean medicine = iuserServices.getMedicineById(itemId);
 		request.setAttribute("medicineInfo", medicine);
 		//判断是否存在，同时决定跳转
 		String flag = request.getParameter("flag");

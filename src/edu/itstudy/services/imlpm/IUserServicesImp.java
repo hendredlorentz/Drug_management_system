@@ -85,7 +85,7 @@ public class IUserServicesImp implements IUserServices{
 		productbean product  = iuserdao.getProductById(id);
 		return product;
 	}
-	public  medicinebean getMedicineById(int id){
+	public  medicinebean getMedicineById(String id){
 		medicinebean medicine = iuserdao.getMedicineById(id);
 		return medicine;
 	}

@@ -175,7 +175,7 @@ public class IUserdaoImpl implements IUserDao {
 			ResultSet rs = pstmt.executeQuery();//将查询到所有的数据存储至ResultSet容器中
 			while (rs.next()) {
 				//遍历ResultSet容器，将数据库数据挨个拿出
-				int medicineIntroId = rs.getInt("medicineIntroId");
+				String medicineIntroId = rs.getString("medicineIntroId");
 				String medicineName = rs.getString("medicineName");
 				String medicineIntroduce = rs.getString("medicineIntroduce");
 				int isOTC = rs.getInt("isOTC");
@@ -265,7 +265,7 @@ public class IUserdaoImpl implements IUserDao {
 			list = new ArrayList<medicinebean>();
 			while (rs.next()) {
 				//将需要显示的内容从rs 中取出。
-				int medicineIntroId = rs.getInt(1);
+				String medicineIntroId = rs.getString(1);
 				String medicineName = rs.getString(2);
 				String medicineIntroduce = rs.getString(3);
 				int isOTC = rs.getInt(4);
@@ -364,14 +364,14 @@ public class IUserdaoImpl implements IUserDao {
 
 	}
 
-	public medicinebean getMedicineById(int id){
+	public medicinebean getMedicineById(String id){
 		Connection conn = DBContil.getConn();
 		String sql = "select medicineName,medicineIntroduce,isOTC,dosage from medicineintroduce where medicineIntroId = ?";
 		PreparedStatement pstmt = null;
 		medicinebean medicine = null;
 		try {
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setInt(1, id);
+			pstmt.setString(1, id);
 			ResultSet rs = pstmt.executeQuery();
 			if (rs.next()) {
 				String medicineName = rs.getString(1);

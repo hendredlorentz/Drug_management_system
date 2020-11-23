@@ -1,7 +1,7 @@
 package edu.itstudy.bean;
 
 public class medicinebean {
-    private int medicineId;
+    private String medicineId;
     private String medicineName;
     private String medicineIntroduce;
     private int isOTC;
@@ -9,7 +9,7 @@ public class medicinebean {
     private String img;
     private int isD;
 
-    public medicinebean(int medicineId, String medicineName, String medicineIntroduce, int isOTC, String dosage , String img) {
+    public medicinebean(String  medicineId, String medicineName, String medicineIntroduce, int isOTC, String dosage , String img) {
         this.medicineId = medicineId;
         this.medicineName = medicineName;
         this.medicineIntroduce = medicineIntroduce;
@@ -18,7 +18,7 @@ public class medicinebean {
         this.img = img;
     }
 
-    public medicinebean(int medicineId, String medicineName, String medicineIntroduce, int isOTC, String dosage, String img, int isD) {
+    public medicinebean(String medicineId, String medicineName, String medicineIntroduce, int isOTC, String dosage, String img, int isD) {
         this.medicineId = medicineId;
         this.medicineName = medicineName;
         this.medicineIntroduce = medicineIntroduce;
@@ -49,11 +49,11 @@ public class medicinebean {
         this.isD = isD;
     }
 
-    public int getMedicineId() {
+    public String getMedicineId() {
         return medicineId;
     }
 
-    public void setMedicineId(int medicineId) {
+    public void setMedicineId(String medicineId) {
         this.medicineId = medicineId;
     }
 
