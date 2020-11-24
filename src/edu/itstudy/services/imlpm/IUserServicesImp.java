@@ -81,8 +81,8 @@ public class IUserServicesImp implements IUserServices{
 		return list ;
 	}
 	@Override
-	public productbean getProductById(int id) {
-		productbean product  = iuserdao.getProductById(id);
+	public userbean getProductById(String id) {
+		userbean product  = iuserdao.getProductById(id);
 		return product;
 	}
 	public  medicinebean getMedicineById(String id){
@@ -90,12 +90,12 @@ public class IUserServicesImp implements IUserServices{
 		return medicine;
 	}
 	@Override
-	public boolean updateProduct(productbean product) {
+	public boolean updateProduct(userbean product) {
 		int i = iuserdao.updateproduct(product);
 		return i>0 ? true : false ;
 	}
 	@Override
-	public boolean delete(int uid, int isD) {
+	public boolean delete(String uid, int isD) {
 		int i = iuserdao.delete(uid, isD);
 		return i >0 ? true : false ;
 	}

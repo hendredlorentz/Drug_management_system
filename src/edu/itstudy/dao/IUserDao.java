@@ -17,11 +17,11 @@ public interface IUserDao {
 	public List<productbean> getSearchInfo(productbean product);
 	public List<userbean> getUserSearchInfo(userbean user);
 	public List<medicinebean> getMedicineSearchInfo(medicinebean medicine);
-	public productbean getProductById(int id);
+	public userbean getProductById(String id);
 
 	public medicinebean getMedicineById(String id);
-	public int updateproduct(productbean product);
-	public int delete(int uid,int isD);
+	public int updateproduct(userbean product);
+	public int delete(String uid,int isD);
 	public int addProduct(productbean product);
 
 }

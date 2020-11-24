@@ -332,27 +332,21 @@ public class IUserdaoImpl implements IUserDao {
 
 	
 	@Override
-	public productbean getProductById(int id) {
+	public userbean getProductById(String id) {
 		Connection conn = DBContil.getConn();
-		String sql = "select itemId,productID,price,jiphone,dephone,Date,begin,dest,time,isDeal from product where itemId = ? ";
+		String sql = "select workerID,isAdmin from userinfo where name = ? ";
 		PreparedStatement pstmt = null;
-		productbean product = null;
+		userbean product = null;
 		try {
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setInt(1, id);
+//			System.out.println("我看看前台拿到id了没"+" "+id);
+			pstmt.setString(1, id);
 			ResultSet rs = pstmt.executeQuery();
 			if (rs.next()) {
-				int pid = rs.getInt(1);
-				String productID = rs.getString(2);
-				int price = rs.getInt(3);
-				String jiphone = rs.getString(4);
-				String dephone = rs.getString(5);
-				String Date = rs.getString(6);
-				String begin = rs.getString(7);
-				String dest = rs.getString(8);
-				int time = rs.getInt(9);
-				int isDeal = rs.getInt(10);
-				product = new productbean(pid, productID, price, begin, dest, jiphone, dephone, isDeal, time, Date);
+				String workerID = rs.getString(1);
+				int isAdmin = rs.getInt(2);
+//				product = new productbean(pid, productID, price, begin, dest, jiphone, dephone, isDeal, time, Date);
+				product = new userbean(id,workerID,isAdmin);
 			}
 
 		} catch (SQLException e) {
@@ -393,46 +387,40 @@ public class IUserdaoImpl implements IUserDao {
 	}
 
 	@Override
-	public int updateproduct(productbean product) {
+	public int updateproduct(userbean product) {
 		Connection conn = DBContil.getConn();
 		int res = 0;
-		String sql = "update product set productID = ? , price=? , begin = ? , dest = ? , jiphone = ?,dephone = ? , isDeal = ? , time = ? , Date = ? where itemId = ?";
+		String sql = "update userinfo set isAdmin = ? , workerID = ? where name = ? ";
 //		String sql2 = "select name from userinfo where name  = ?";
 		PreparedStatement pstmt = null;
 		try {
 			pstmt = conn.prepareStatement(sql);// 初始化
-
-			pstmt.setString(1, product.getProductID());// 传递从前端拿到的值
-			pstmt.setInt(2, product.getPrice());
-			pstmt.setString(3, product.getBegin());
-			pstmt.setString(4, product.getDest());
-			pstmt.setString(5, product.getJiphone());
-			pstmt.setString(6, product.getDephone());
-			pstmt.setInt(7, product.getIsDeal());
-			pstmt.setInt(8, product.getTime());
-			pstmt.setString(9, product.getDate());
-			pstmt.setInt(10, product.getUid());
+			System.out.println("!!!!?!"+product.getWorkerID()+" "+product.getIsAdmin());
+			pstmt.setInt(1, product.getIsAdmin());// 传递从前端拿到的值
+			pstmt.setString(2, product.getWorkerID());
+			pstmt.setString(3,product.getName());
+			System.out.println(pstmt);
 			res = pstmt.executeUpdate();
 			
 		} catch (SQLException e) {
 
 			e.printStackTrace();
 		}
-
+		System.out.println("res="+res);
 		return res;
 	}
 
 	@Override
-	public int delete(int uid,int isD) {
+	public int delete(String uid,int isD) {
 		Connection conn = DBContil.getConn();
 		int res = 0;
-		String sql = "update product set isD=? where itemId = ?";
+		String sql = "update userinfo set isD=? where workerID = ?";
 		PreparedStatement pstmt = null;
 		try {
 			pstmt = conn.prepareStatement(sql);// 初始化
 
-			pstmt.setInt(1, isD);// 传递从前端拿到的值
-			pstmt.setInt(2, uid);
+			pstmt.setInt(1, 1);
+			pstmt.setString(2, uid);
 			
 			res = pstmt.executeUpdate();
 			

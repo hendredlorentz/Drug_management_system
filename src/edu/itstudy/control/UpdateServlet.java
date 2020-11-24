@@ -20,33 +20,24 @@ public class UpdateServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
-		String uid = request.getParameter("uid");
-		String productid = request.getParameter("productid");
-		String price = request.getParameter("price");
-		String begin = request.getParameter("begin");
-		String destination = request.getParameter("destination");
-		String jiphone = request.getParameter("jiphone");
-		String dephone = request.getParameter("dephone");
-		String  isDeal = request.getParameter("isDeal");
-		String time = request.getParameter("time");
-		String date = request.getParameter("date");
-		if(uid==null||"".equals(uid)) {
-			uid="0";
+		String name = request.getParameter("name");
+		String workerID = request.getParameter("workerID");
+		String isAdmin = request.getParameter("isAdmin");
+		System.out.println("workerID是多少！："+workerID + isAdmin);
+		if(workerID==null||"".equals(workerID)) {
+			workerID="000000";
 		}
-		if(price==null||"".equals(price)) {
-			price="0";
+		if(isAdmin==null||"".equals(isAdmin)) {
+			isAdmin="0";
 		}
-		if(isDeal==null||"".equals(isDeal)) {
-			isDeal="0";
-		}
-		if(time==null||"".equals(time)) {
-			time="0";
-		}
-		productbean product = new productbean(Integer.parseInt(uid),productid,Integer.parseInt(price),begin,destination,jiphone,dephone,Integer.parseInt(isDeal),Integer.parseInt(time),date);
+		userbean product = new userbean(name,workerID,Integer.parseInt(isAdmin));
+		System.out.println("这里测试修改成功了没??？"+" "+product.getWorkerID()+" "+product.getIsAdmin()+product.getName());
+
+//		userbean product = new productbean(Integer.parseInt(uid),productid,Integer.parseInt(price),begin,destination,jiphone,dephone,Integer.parseInt(isDeal),Integer.parseInt(time),date);
 		boolean result = iuserServices.updateProduct(product);
-		
-			request.setAttribute("info",result? "修改成功，请点击查询进行刷新":"修改失败");//前台传递参数info，告知用户名或密码错误
-			request.getRequestDispatcher("productControl.jsp").forward(request, response);//同时跳转到注册页面
+		System.out.println("这里测试修改成功了没？"+" "+result);
+		request.setAttribute("info",result? "修改成功，请点击查询进行刷新":"修改失败");//前台传递参数info，告知用户名或密码错误
+		request.getRequestDispatcher("productControl.jsp").forward(request, response);
 		
 	}
 

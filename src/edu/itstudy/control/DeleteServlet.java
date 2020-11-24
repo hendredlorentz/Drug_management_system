@@ -21,9 +21,9 @@ public class DeleteServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
-		String uid = request.getParameter("uid");
+		String uid = request.getParameter("workerID");
 		String isD = request.getParameter("isD");
-		boolean res = iuserServices.delete(Integer.parseInt(uid), Integer.parseInt(isD));
+		boolean res = iuserServices.delete(uid, Integer.parseInt(isD));
 		PrintWriter out = response.getWriter();
 		//直接给前端的success里面的data
 		out.print(res?1:0);

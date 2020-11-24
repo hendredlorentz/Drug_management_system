@@ -21,11 +21,13 @@ public class productInfoServlet extends HttpServlet {
 			throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");//防止乱码
 		String itemId = request.getParameter("uid");//拿到前端的uid
+		System.out.println("这就是前端的itemID"+ itemId);
 		if(null == itemId ||"".equals(itemId)) {
 			System.out.println(itemId);
 		}
 		//直接对拿到的uid作为函数参数进行查询
-		productbean product = iuserServices.getProductById(Integer.parseInt(itemId));
+		userbean product = iuserServices.getProductById(itemId);
+		System.out.println("我说婷婷过来看看！！"+product);
 		request.setAttribute("product", product);
 		//判断是否存在，同时决定跳转
 		String flag = request.getParameter("flag");

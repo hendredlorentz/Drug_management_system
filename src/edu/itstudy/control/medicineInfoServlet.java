@@ -32,6 +32,7 @@ public class medicineInfoServlet extends HttpServlet {
 		String flag = request.getParameter("flag");
 		if(null == flag) {
 			request.getRequestDispatcher("medicineInfo.jsp").forward(request, response);
+
 		}else {
 			request.getRequestDispatcher("productUpdate.jsp").forward(request, response);
 		}

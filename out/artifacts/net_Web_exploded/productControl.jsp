@@ -19,7 +19,7 @@
     toastr.options = {
         "timeOut": "2000"
     };
-    let uid = 0;
+    let workerID = "";
     var objline;
     $(function() {
         <%--console.log(${userlist}+"!!!!!");--%>
@@ -31,7 +31,7 @@
                 type: "post",
                 dataType: "json",
                 async: true,
-                data: "uid=" + uid + "&isD=0",
+                data: "workerID=" + workerID + "&isD=0",
                 success: function(data) {
                     if (data == 1) {
                         objline.hide();
@@ -50,8 +50,9 @@
         alert("对不起，由于您是普通管理员，您无权对其进行操作！");
     }
     function showIt(uid_, obj) {
-        uid = uid_;
+        workerID = uid_;
         objline = $(obj).parent().parent();
+        console.log(workerID+"!!!"+objline)
         $('#myModal').modal('show'); //手动打开modal
     }
 </script>
@@ -70,9 +71,7 @@
         </div>
 
         <button type="submit" class="btn btn-sm btn-success" style="margin-top: 5px;">查询</button>
-        <c:if test="${isAdmin == 1}">
-            <a href="addproduct.jsp" style="margin-top: 4px;" class="btn btn-warning btn-sm">添加</a>
-        </c:if>
+
     </form>
     <hr> ${info }
     <table class="table table-striped table-hover">
@@ -105,8 +104,8 @@
                 <td>
                     <!-- 对每个物流具有独特的标识符进行查看 -->
                     <c:if test="${isAdmin == 1}">
-                        <a href="productInfo?flag=update&uid=${user.uid }" class="btn btn-primary btn-xs">修改</a>
-                        <button type="button" class="btn btn-danger btn-xs" onclick="showIt( ${ user.uid} ,this )">删除</button>
+                        <a href="productInfo?flag=update&uid=${user.name }" class="btn btn-primary btn-xs">修改</a>
+                        <button type="button" class="btn btn-danger btn-xs" onclick="showIt( ${ user.workerID} ,this )">删除</button>
                     </c:if>
                     <c:if test="${isAdmin == 0}">
                         <button type="button" class="btn btn-danger btn-xs" onclick="clickTip()">无权操作</button>

@@ -55,6 +55,12 @@ public class userbean {
 		this.workerID = workerID;
 	}
 
+	public userbean(String name, String workerID,int isAdmin) {
+		this.name = name;
+		this.workerID = workerID;
+		this.isAdmin = isAdmin;
+	}
+
 	public userbean(int uid, String name) {
 		this.uid = uid;
 		this.name = name;
