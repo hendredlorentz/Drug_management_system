@@ -44,6 +44,10 @@
 		<servlet-class>edu.itstudy.control.productOfServlet</servlet-class>
 	</servlet>
 
+	<servlet>
+		<servlet-name>warehouseOfServlet</servlet-name>
+		<servlet-class>edu.itstudy.control.warehouseOfServlet</servlet-class>
+	</servlet>
 
 	<servlet>
 		<servlet-name>medicineOfServlet</servlet-name>
@@ -59,7 +63,12 @@
 		<servlet-name>medicineInfoServlet</servlet-name>
 		<servlet-class>edu.itstudy.control.medicineInfoServlet</servlet-class>
 	</servlet>
-	 
+
+	<servlet>
+		<servlet-name>warehouseInfoServlet</servlet-name>
+		<servlet-class>edu.itstudy.control.warehouseInfoServlet</servlet-class>
+	</servlet>
+
 	 <servlet>
 		<servlet-name>UpdateServlet</servlet-name>
 		<servlet-class>edu.itstudy.control.UpdateServlet</servlet-class>
@@ -69,7 +78,12 @@
 		<servlet-name>DeleteServlet</servlet-name>
 		<servlet-class>edu.itstudy.control.DeleteServlet</servlet-class>
 	</servlet>
-	
+
+	<servlet>
+		<servlet-name>DeleteMedicineServlet</servlet-name>
+		<servlet-class>edu.itstudy.control.DeleteMedicineServlet</servlet-class>
+	</servlet>
+
 	 <servlet>
 		<servlet-name>addProductServlet</servlet-name>
 		<servlet-class>edu.itstudy.control.addProductServlet</servlet-class>
@@ -110,6 +124,11 @@
 	</servlet-mapping>
 
 	<servlet-mapping>
+		<servlet-name>warehouseOfServlet</servlet-name>
+		<url-pattern>/warehouseControl</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
 		<servlet-name>medicineOfServlet</servlet-name>
 		<url-pattern>/medicineControl</url-pattern>
 	</servlet-mapping>
@@ -130,6 +149,11 @@
 	</servlet-mapping>
 
 	<servlet-mapping>
+		<servlet-name>warehouseInfoServlet</servlet-name>
+		<url-pattern>/warehouseInfo</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
 		<servlet-name>UpdateServlet</servlet-name>
 		<url-pattern>/productUpdate</url-pattern>
 	</servlet-mapping>
@@ -139,8 +163,13 @@
 		<url-pattern>/addproduct</url-pattern>
 	</servlet-mapping>
 	
-		<servlet-mapping>
+	<servlet-mapping>
 		<servlet-name>DeleteServlet</servlet-name>
 		<url-pattern>/productdel</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DeleteMedicineServlet</servlet-name>
+		<url-pattern>/medicinedel</url-pattern>
 	</servlet-mapping>
 </web-app>

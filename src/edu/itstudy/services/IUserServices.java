@@ -15,13 +15,16 @@ public interface IUserServices {
 	public List<productbean> information();
 	public List<userbean> UserInfo();
 	public List<medicinebean> medicineInfo();
+	public List<warehousebean> warehouseInfo();
 	public List<productbean> searchInfo(productbean product);
 //	searchUserInfo
 	public List<userbean> searchUserInfo(userbean user);
 	public List<medicinebean> searchMedicineInfo(medicinebean medicine);
+	public List<warehousebean> searchwarehouseInfo(warehousebean warehouse);
 	public userbean getProductById(String id);
 	public  medicinebean getMedicineById(String id);
 	public boolean updateProduct(userbean product);
 	public boolean delete(String uid,int isD);
-	public boolean addProduct(productbean product);
+	public boolean medicinedelete(String medicineID,int isD);
+	public boolean addProduct(medicinebean product);
 }

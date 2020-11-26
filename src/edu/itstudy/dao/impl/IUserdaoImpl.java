@@ -11,6 +11,7 @@ import java.util.*;
 import edu.itstudy.bean.medicinebean;
 import edu.itstudy.bean.productbean;
 import edu.itstudy.bean.userbean;
+import edu.itstudy.bean.warehousebean;
 import edu.itstudy.dao.IUserDao;
 import edu.itstudy.utils.DBContil;
 
@@ -55,7 +56,7 @@ public class IUserdaoImpl implements IUserDao {
 		int uid = 0;
 		userbean user = null;
 		Connection conn = DBContil.getConn();
-		String sql = "select uid,email,brotherName,isAdmin from userinfo where name =? and password = ?";
+		String sql = "select uid,email,brotherName,isAdmin from userinfo where name =? and password = ? and isD = 0";
 		PreparedStatement pstmt = null;
 		try {
 			pstmt = conn.prepareStatement(sql);
@@ -167,7 +168,7 @@ public class IUserdaoImpl implements IUserDao {
 	public List<medicinebean> getMedicineInfo() {
 		Connection conn = DBContil.getConn();//初始化
 		//sql语句，查找数据库中的数据
-		String sql = "select medicineIntroId , medicineName , medicineIntroduce ,isOTC,dosage,img from medicineintroduce";
+		String sql = "select medicineIntroId , medicineName , medicineIntroduce ,isOTC,dosage,img from medicineintroduce where isD=0";
 		PreparedStatement pstmt = null;
 		List<medicinebean> list = new ArrayList<medicinebean>();
 		try {
@@ -184,6 +185,39 @@ public class IUserdaoImpl implements IUserDao {
 
 				medicinebean medicineInfomation  = new medicinebean(medicineIntroId,medicineName,medicineIntroduce,isOTC,dosage,img);
 				list.add(medicineInfomation);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
+
+	public List<warehousebean> getWarehouseInfo(){
+		Connection conn = DBContil.getConn();//初始化
+		//sql语句，查找数据库中的数据
+		String sql = "select medicine_id , medicine_name , medicineNumber ,medicineOutNumber,medicineInPrice,medicineOutPrice,medicineCheckMan,inTime,isOTC,location from inventorytable";
+		PreparedStatement pstmt = null;
+		List<warehousebean> list = new ArrayList<warehousebean>();
+		try {
+			pstmt = conn.prepareStatement(sql);//将sql语句进入Mysql进行查询
+			System.out.println("这里是Dao中的userinfo"+" "+pstmt);
+			ResultSet rs = pstmt.executeQuery();//将查询到所有的数据存储至ResultSet容器中
+			while (rs.next()) {
+				//遍历ResultSet容器，将数据库数据挨个拿出
+				String medicine_id = rs.getString("medicine_id");
+				String medicine_name = rs.getString("medicine_name");
+				int medicineNumber = rs.getInt("medicineNumber");
+				int medicineOutNumber = rs.getInt("isOTC");
+				int medicineInPrice = rs.getInt("medicineInPrice");
+				int medicineOutPrice = rs.getInt("medicineOutPrice");
+				String medicineCheckMan = rs.getString("medicineCheckMan");
+				String inTime = rs.getString("inTime");
+				int isOTC = rs.getInt("isOTC");
+				String location = rs.getString("location");
+				warehousebean warehouse = new warehousebean(medicine_id,medicine_name,medicineNumber,medicineOutNumber,medicineInPrice,medicineOutPrice,medicineCheckMan,inTime,isOTC,location);
+
+//				medicinebean medicineInfomation  = new medicinebean(medicineIntroId,medicineName,medicineIntroduce,isOTC,dosage,img);
+				list.add(warehouse);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -230,6 +264,61 @@ public class IUserdaoImpl implements IUserDao {
 //				userbean user1 = new userbean(uid,name,null,null,email,brotherName,isAdmin);
 				userbean user1 = new userbean(uid,name,null,null,email,brotherName,isAdmin,workerID);
 				list.add(user1);//添加至显示list
+
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return list;//返回
+	}
+	public  List<warehousebean> getWarehouseSearchInfo(warehousebean warehouse){
+		Connection conn = DBContil.getConn();//初始化
+		String sql = "select medicine_id , medicine_name , medicineNumber ,medicineOutNumber,medicineInPrice,medicineOutPrice,medicineCheckMan,inTime,isOTC,location from inventorytable where 1=1 ";//对数据库数据进行查询
+		StringBuffer sb = new StringBuffer(sql);//转化为stringbuffer类型，方便动态sql
+		List<Object> params = new ArrayList<Object>();
+		//以下的三条if目的是判断输入框中内容是否为空，如果不为空，进行动态sql条件的附加。
+		if ( warehouse.getMedicine_id()!=null&&!"".equals(warehouse.getMedicine_id())) {
+			sb.append(" and medicine_id like ? ");
+			params.add("%" + warehouse.getMedicine_id() + "%");
+		}
+		if (warehouse.getMedicine_name() != null && !"".equals(warehouse.getMedicine_name())) {
+			sb.append(" and medicine_name like ? ");
+			params.add("%" + warehouse.getMedicine_name() + "%");
+		}
+
+		sql = sb.toString(); //将完整的String转化
+		System.out.println("这就是仓库的sql语句"+" "+sql);
+		PreparedStatement pstmt = null;
+		List<warehousebean> list = null;
+		try {
+			pstmt = conn.prepareStatement(sql);
+			for (int i = 0; i < params.size(); i++) {
+				pstmt.setObject(i + 1, params.get(i));//对list添加对象
+			}
+			ResultSet rs = pstmt.executeQuery();//拿到需要显示的内容
+			list = new ArrayList<warehousebean>();
+			while (rs.next()) {
+				//将需要显示的内容从rs 中取出。
+//				String medicineIntroId = rs.getString(1);
+//				String medicineName = rs.getString(2);
+//				String medicineIntroduce = rs.getString(3);
+//				int isOTC = rs.getInt(4);
+//				String dosage = rs.getString(5);
+				String medicine_id = rs.getString("medicine_id");
+				String medicine_name = rs.getString("medicine_name");
+				int medicineNumber = rs.getInt("medicineNumber");
+				int medicineOutNumber = rs.getInt("isOTC");
+				int medicineInPrice = rs.getInt("medicineInPrice");
+				int medicineOutPrice = rs.getInt("medicineOutPrice");
+				String medicineCheckMan = rs.getString("medicineCheckMan");
+				String inTime = rs.getString("inTime");
+				int isOTC = rs.getInt("isOTC");
+				String location = rs.getString("location");
+				//对象封装
+//				productbean product1 = new productbean(uid, productID, begin, dest, isDeal, riqi);
+//				userbean user1 = new userbean(uid,name,null,null,email,brotherName,isAdmin);
+				warehousebean warehouse1 = new warehousebean(medicine_id,medicine_name,medicineNumber,medicineOutNumber,medicineInPrice,medicineOutPrice,medicineCheckMan,inTime,isOTC,location);
+				list.add(warehouse1);//添加至显示list
 
 			}
 		} catch (SQLException e) {
@@ -421,7 +510,7 @@ public class IUserdaoImpl implements IUserDao {
 
 			pstmt.setInt(1, 1);
 			pstmt.setString(2, uid);
-			
+			System.out.println("这里是用户删除测试！"+pstmt);
 			res = pstmt.executeUpdate();
 			
 		} catch (SQLException e) {
@@ -432,29 +521,48 @@ public class IUserdaoImpl implements IUserDao {
 		return res;
 	}
 
-	@Override
-	public int addProduct(productbean product) {
+	public int medicinedelete(String medicineID,int isD){
 		Connection conn = DBContil.getConn();
 		int res = 0;
-		String sql = "insert into product ( productID , price , begin , dest , jiphone , dephone , isDeal , time , Date )  values( ? , ? , ? , ? ,? , ? , ?,?,?  )";
-		String sql2 = "select productID from product where productID  = ?";
+		String sql = "update medicineintroduce set isD=? where medicineIntroId = ?";
+		PreparedStatement pstmt = null;
+		try {
+			pstmt = conn.prepareStatement(sql);// 初始化
+
+			pstmt.setInt(1, 1);
+			pstmt.setString(2, medicineID);
+			System.out.println("这里是药品信息测试！"+pstmt);
+			res = pstmt.executeUpdate();
+
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		}
+
+		return res;
+	}
+
+	@Override
+	public int addProduct(medicinebean product) {
+		Connection conn = DBContil.getConn();
+		int res = 0;
+		String sql = "insert into medicineintroduce ( medicineIntroId , medicineName , medicineIntroduce , isOTC , dosage , img , isD  )  values( ? , ? , ? , ? ,? , ? ,0  )";
+		String sql2 = "select medicineIntroId from medicineintroduce where medicineIntroId  = ?";
 		PreparedStatement NameEqual = null;
 		PreparedStatement pstmt = null;
 		try {
 			pstmt = conn.prepareStatement(sql);// 初始化
-			pstmt.setString(1,product.getProductID() );// 传递从前端拿到的值
-			pstmt.setInt(2,product.getPrice() );
-			pstmt.setString(3,product.getBegin() );
-			pstmt.setString(4, product.getDest());
-			pstmt.setString(5, product.getJiphone());
-			pstmt.setString(6, product.getDephone());
-			pstmt.setInt(7, product.getIsDeal());
-			pstmt.setInt(8, product.getTime());
-			pstmt.setString(9, product.getDate());
+			pstmt.setString(1,product.getMedicineId() );// 传递从前端拿到的值
+			pstmt.setString(2,product.getMedicineName() );
+			pstmt.setString(3,product.getMedicineIntroduce() );
+			pstmt.setInt(4, product.getIsOTC());
+			pstmt.setString(5, product.getDosage());
+			pstmt.setString(6, product.getImg());
+
 
 //			这里考试搞用户名重复问题
 			NameEqual = conn.prepareStatement(sql2);// 初始化
-			NameEqual.setString(1, product.getProductID());//
+			NameEqual.setString(1, product.getMedicineId());//
 			ResultSet rsName = NameEqual.executeQuery();// 将前台数据存入resultset中
 			if (rsName.next() == false) {// 名字无匹配项
 				res = pstmt.executeUpdate();// 直接进行上传

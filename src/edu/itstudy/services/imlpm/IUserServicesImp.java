@@ -51,7 +51,13 @@ public class IUserServicesImp implements IUserServices{
 		}
 		return Mlist;
 	}
-
+	public List<warehousebean> warehouseInfo(){
+		List<warehousebean> Mlist = iuserdao.getWarehouseInfo();
+		if(null == Mlist || Mlist.size() == 0){
+			return null;
+		}
+		return Mlist;
+	}
 	@Override
 	public List<productbean> searchInfo(productbean product) {
 		List<productbean> list = iuserdao.getSearchInfo(product);
@@ -80,6 +86,15 @@ public class IUserServicesImp implements IUserServices{
 		System.out.println("这才是找到了药品信息嘛！！");
 		return list ;
 	}
+	public List<warehousebean> searchwarehouseInfo(warehousebean warehouse){
+		List<warehousebean> list = iuserdao.getWarehouseSearchInfo(warehouse);
+		if(null == list || list.size() == 0) {
+			System.out.println("寻找仓库信息到的是个空的，啥都没有");
+			return null;
+		}
+		System.out.println("这才是找到了仓库信息嘛！！");
+		return list ;
+	}
 	@Override
 	public userbean getProductById(String id) {
 		userbean product  = iuserdao.getProductById(id);
@@ -99,8 +114,12 @@ public class IUserServicesImp implements IUserServices{
 		int i = iuserdao.delete(uid, isD);
 		return i >0 ? true : false ;
 	}
+	public boolean medicinedelete(String medicineID,int isD){
+		int i = iuserdao.medicinedelete(medicineID, isD);
+		return i >0 ? true : false ;
+	}
 	@Override
-	public boolean addProduct(productbean product) {
+	public boolean addProduct(medicinebean product) {
 		int i = iuserdao.addProduct(product);
 		return i>0 ? true : false ;
 	}

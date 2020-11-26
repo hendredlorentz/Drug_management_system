@@ -1,7 +1,7 @@
 package edu.itstudy.control;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -10,25 +10,25 @@ import javax.servlet.http.HttpServletResponse;
 
 import edu.itstudy.bean.productbean;
 import edu.itstudy.bean.userbean;
+
+import edu.itstudy.bean.warehousebean;
 import edu.itstudy.services.IUserServices;
 import edu.itstudy.services.imlpm.IUserServicesImp;
 
-public class DeleteServlet extends HttpServlet {
+public class warehouseInfoServlet extends HttpServlet {
 
 	private IUserServices iuserServices = new IUserServicesImp();
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		request.setCharacterEncoding("UTF-8");
-		String uid = request.getParameter("workerID");
-		String isD = request.getParameter("isD");
-		System.out.println("这里是原来的SER!");
-		boolean res = iuserServices.delete(uid, Integer.parseInt(isD));
-		PrintWriter out = response.getWriter();
-		//直接给前端的success里面的data
-		out.print(res?1:0);
-		
+		request.setCharacterEncoding("UTF-8");//防止乱码
+		List<warehousebean> list = iuserServices.warehouseInfo();//拿到Dao中的list
+		System.out.println("thisis warehouselist"+list);
+		request.setAttribute("warehouseList", list);//将list存入命为“list”中
+		request.getRequestDispatcher("warehouseOK").forward(request,response);
+		request.getRequestDispatcher("index").forward(request, response);
+
 	}
 
 	@Override

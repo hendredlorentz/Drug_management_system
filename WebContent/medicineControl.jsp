@@ -19,7 +19,7 @@
             toastr.options = {
                 "timeOut": "2000"
             };
-            let uid = 0;
+            let uid = " ";
             var objline;
             $(function() {
                 <%--console.log(${userlist}+"!!!!!");--%>
@@ -27,7 +27,7 @@
                     //关闭模态框
                     $('#myModal').modal('hide');
                     $.ajax({
-                        url: "productdel",
+                        url: "medicinedel",
                         type: "post",
                         dataType: "json",
                         async: true,
@@ -52,6 +52,7 @@
             function showIt(uid_, obj) {
                 uid = uid_;
                 objline = $(obj).parent().parent();
+                console.log("拿到的数据"+" "+uid )
                 $('#myModal').modal('show'); //手动打开modal
             }
         </script>
@@ -103,8 +104,7 @@
 
                                 <td>
 
-                                        <a href="productInfo?flag=update&uid=${user.uid }" class="btn btn-primary btn-xs">修改</a>
-                                        <button type="button" class="btn btn-danger btn-xs" onclick="showIt( ${ user.uid} ,this )">删除</button>
+                                        <button type="button" class="btn btn-danger btn-xs" onclick="showIt('${medicine.medicineId}' ,this )">删除</button>
 
                                 </td>
                             </tr>

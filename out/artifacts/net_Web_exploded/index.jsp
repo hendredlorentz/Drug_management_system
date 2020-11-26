@@ -83,7 +83,7 @@
                         <li><a href="productControl" target="_blank">用户列表</a></li>
                         <li><a href="medicineControl" target="_blank">药品介绍</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#" target="_blank">药品仓库</a></li>
+                        <li><a href="warehouseControl" target="_blank">药品仓库</a></li>
                         <li><a href="Adress.jsp" target="_blank">仓库地址</a></li>
                     </ul>
                 </li>
@@ -231,7 +231,7 @@
 
                 <p style="font-size: 17px; margin-top: 30px;">好兄弟姓名: ${brotherName}</p>
                 <p style="font-size: 17px;">邮箱: ${email}</p>
-                <p style="font-size: 17px;">是否为管理员: <c:if test="${isAdmin == 0}">否</c:if>   <c:if test="${isAdmin == 1}">是</c:if></p>
+                <p style="font-size: 17px;">是否为高级管理员: <c:if test="${isAdmin == 0}">否</c:if>   <c:if test="${isAdmin == 1}">是</c:if></p>
 
             </div>
             <div class="modal-footer">
