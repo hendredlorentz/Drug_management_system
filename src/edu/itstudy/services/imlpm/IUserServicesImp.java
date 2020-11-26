@@ -99,8 +99,12 @@ public class IUserServicesImp implements IUserServices{
 		int i = iuserdao.delete(uid, isD);
 		return i >0 ? true : false ;
 	}
+	public boolean medicinedelete(String medicineID,int isD){
+		int i = iuserdao.medicinedelete(medicineID, isD);
+		return i >0 ? true : false ;
+	}
 	@Override
-	public boolean addProduct(productbean product) {
+	public boolean addProduct(medicinebean product) {
 		int i = iuserdao.addProduct(product);
 		return i>0 ? true : false ;
 	}

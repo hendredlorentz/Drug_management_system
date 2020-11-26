@@ -22,6 +22,7 @@ public interface IUserDao {
 	public medicinebean getMedicineById(String id);
 	public int updateproduct(userbean product);
 	public int delete(String uid,int isD);
-	public int addProduct(productbean product);
+	public int medicinedelete(String medicineID,int isD);
+	public int addProduct(medicinebean product);
 
 }

@@ -55,7 +55,7 @@ public class IUserdaoImpl implements IUserDao {
 		int uid = 0;
 		userbean user = null;
 		Connection conn = DBContil.getConn();
-		String sql = "select uid,email,brotherName,isAdmin from userinfo where name =? and password = ?";
+		String sql = "select uid,email,brotherName,isAdmin from userinfo where name =? and password = ? and isD = 0";
 		PreparedStatement pstmt = null;
 		try {
 			pstmt = conn.prepareStatement(sql);
@@ -167,7 +167,7 @@ public class IUserdaoImpl implements IUserDao {
 	public List<medicinebean> getMedicineInfo() {
 		Connection conn = DBContil.getConn();//初始化
 		//sql语句，查找数据库中的数据
-		String sql = "select medicineIntroId , medicineName , medicineIntroduce ,isOTC,dosage,img from medicineintroduce";
+		String sql = "select medicineIntroId , medicineName , medicineIntroduce ,isOTC,dosage,img from medicineintroduce where isD=0";
 		PreparedStatement pstmt = null;
 		List<medicinebean> list = new ArrayList<medicinebean>();
 		try {
@@ -421,7 +421,7 @@ public class IUserdaoImpl implements IUserDao {
 
 			pstmt.setInt(1, 1);
 			pstmt.setString(2, uid);
-			
+			System.out.println("这里是用户删除测试！"+pstmt);
 			res = pstmt.executeUpdate();
 			
 		} catch (SQLException e) {
@@ -432,29 +432,48 @@ public class IUserdaoImpl implements IUserDao {
 		return res;
 	}
 
-	@Override
-	public int addProduct(productbean product) {
+	public int medicinedelete(String medicineID,int isD){
 		Connection conn = DBContil.getConn();
 		int res = 0;
-		String sql = "insert into product ( productID , price , begin , dest , jiphone , dephone , isDeal , time , Date )  values( ? , ? , ? , ? ,? , ? , ?,?,?  )";
-		String sql2 = "select productID from product where productID  = ?";
+		String sql = "update medicineintroduce set isD=? where medicineIntroId = ?";
+		PreparedStatement pstmt = null;
+		try {
+			pstmt = conn.prepareStatement(sql);// 初始化
+
+			pstmt.setInt(1, 1);
+			pstmt.setString(2, medicineID);
+			System.out.println("这里是药品信息测试！"+pstmt);
+			res = pstmt.executeUpdate();
+
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		}
+
+		return res;
+	}
+
+	@Override
+	public int addProduct(medicinebean product) {
+		Connection conn = DBContil.getConn();
+		int res = 0;
+		String sql = "insert into medicineintroduce ( medicineIntroId , medicineName , medicineIntroduce , isOTC , dosage , img , isD  )  values( ? , ? , ? , ? ,? , ? ,0  )";
+		String sql2 = "select medicineIntroId from medicineintroduce where medicineIntroId  = ?";
 		PreparedStatement NameEqual = null;
 		PreparedStatement pstmt = null;
 		try {
 			pstmt = conn.prepareStatement(sql);// 初始化
-			pstmt.setString(1,product.getProductID() );// 传递从前端拿到的值
-			pstmt.setInt(2,product.getPrice() );
-			pstmt.setString(3,product.getBegin() );
-			pstmt.setString(4, product.getDest());
-			pstmt.setString(5, product.getJiphone());
-			pstmt.setString(6, product.getDephone());
-			pstmt.setInt(7, product.getIsDeal());
-			pstmt.setInt(8, product.getTime());
-			pstmt.setString(9, product.getDate());
+			pstmt.setString(1,product.getMedicineId() );// 传递从前端拿到的值
+			pstmt.setString(2,product.getMedicineName() );
+			pstmt.setString(3,product.getMedicineIntroduce() );
+			pstmt.setInt(4, product.getIsOTC());
+			pstmt.setString(5, product.getDosage());
+			pstmt.setString(6, product.getImg());
+
 
 //			这里考试搞用户名重复问题
 			NameEqual = conn.prepareStatement(sql2);// 初始化
-			NameEqual.setString(1, product.getProductID());//
+			NameEqual.setString(1, product.getMedicineId());//
 			ResultSet rsName = NameEqual.executeQuery();// 将前台数据存入resultset中
 			if (rsName.next() == false) {// 名字无匹配项
 				res = pstmt.executeUpdate();// 直接进行上传

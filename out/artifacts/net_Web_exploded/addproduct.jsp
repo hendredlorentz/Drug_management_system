@@ -15,83 +15,52 @@
         $().ready(function() {
             $("#registerForm").validate({
                 rules: {
-                    productID: {
+                    medicineIntroId: {
                         required: true,
-                        maxlength: 6,
-                        minlength: 6,
+                        maxlength: 8,
+                        minlength: 8,
                     },
-                    price: {
-                        required: true,
-                    },
-                    begin: {
+                    medicineName: {
                         required: true,
                     },
-                    dest: {
+                    medicineIntroduce: {
                         required: true,
                     },
-                    jiphone: {
-                        required: true,
-                        maxlength: 11,
-                        minlength: 11,
-                    },
-                    dephone: {
-                        required: true,
-                        maxlength: 11,
-                        minlength: 11,
-                    },
-                    isDeal: {
+                    isOTC: {
                         required: true,
                         maxlength: 1,
                         minlength: 1,
                     },
-                    time: {
-                        required: true,
-                        maxlength: 1,
-                        minlength: 1,
-                    },
-                    Date: {
+                    dosage: {
                         required: true,
                     },
+                    img: {
+                        required: true,
+                    }
                 },
                 messages: { //这里为填写出错的报错信息
-                    productID: {
+                    medicineIntroId: {
                         required: "不能为空",
-                        maxlength: "最大长度为6",
-                        minlength: "最小长度为6"
+                        maxlength: "最大长度为8",
+                        minlength: "最小长度为8"
                     },
-                    price: {
-                        required: "不能为空",
-                    },
-                    begin: {
+                    medicineName: {
                         required: "不能为空",
                     },
-                    dest: {
+                    medicineIntroduce: {
                         required: "不能为空",
                     },
-                    jiphone: {
-                        required: "不能为空",
-
-                        maxlength: "最大长度为11",
-                        minlength: "最小长度为11"
-                    },
-                    dephone: {
-                        required: "不能为空",
-                        maxlength: "最大长度为11",
-                        minlength: "最小长度为11"
-                    },
-                    isDeal: {
+                    isOTC: {
                         required: "不能为空",
                         maxlength: "最大长度为1",
                         minlength: "最小长度为1"
                     },
-                    time: {
-                        required: "不能为空",
-                        maxlength: "最大长度为1",
-                        minlength: "最小长度为1"
-                    },
-                    Date: {
+                    dosage: {
                         required: "不能为空",
                     },
+                    img: {
+                        required: "不能为空",
+                    }
                 }
             })
         });
@@ -100,61 +69,44 @@
     <body>
         <span style="padding-left: 130px;color: #f00;">${info }</span>
         <form class="form-horizontal" id="registerForm" role="form" action="addproduct" method="post">
-            <h2 style="text-align: center;">添加</h2>
+            <h2 style="text-align: center;">药品信息添加</h2>
             <div class="form-group" style="margin-top: 40px;">
-                <label for="productID" class="col-sm-2 control-label">物流码</label>
+                <label for="medicineIntroId" class="col-sm-2 control-label">药品ID</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="productID" name="productID" placeholder="物流码">
+                    <input type="text" class="form-control" id="medicineIntroId" name="medicineIntroId" placeholder="药品ID">
                 </div>
             </div>
             <div class="form-group">
-                <label for="price" class="col-sm-2 control-label">价格</label>
+                <label for="medicineName" class="col-sm-2 control-label">药品名称</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="price" name="price" placeholder="价格">
+                    <input type="text" class="form-control" id="medicineName" name="medicineName" placeholder="药品名称">
                 </div>
             </div>
             <div class="form-group">
-                <label for="begin" class="col-sm-2 control-label">始发地</label>
+                <label for="medicineIntroduce" class="col-sm-2 control-label">药品介绍</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="begin" name="begin" placeholder="始发地">
+                    <input type="text" class="form-control" id="medicineIntroduce" name="medicineIntroduce" placeholder="药品介绍">
                 </div>
             </div>
             <div class="form-group">
-                <label for="dest" class="col-sm-2 control-label">目的地</label>
+                <label for="isOTC" class="col-sm-2 control-label">是否为非处方药</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="dest" name="dest" placeholder="目的地">
+                    <input type="text" class="form-control" id="isOTC" name="isOTC" placeholder="1为处方药，0为非处方药">
                 </div>
             </div>
             <div class="form-group">
-                <label for="jiphone" class="col-sm-2 control-label">寄者电话</label>
+                <label for="dosage" class="col-sm-2 control-label">用法用量</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="jiphone" name="jiphone" placeholder="寄者电话">
+                    <input type="text" class="form-control" id="dosage" name="dosage" placeholder="用法用量">
                 </div>
             </div>
             <div class="form-group">
-                <label for="dephone" class="col-sm-2 control-label">收者电话</label>
+                <label for="img" class="col-sm-2 control-label">照片地址</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="dephone" name="dephone" placeholder="收者电话">
+                    <input type="text" class="form-control" id="img" name="img" placeholder="照片地址">
                 </div>
             </div>
-            <div class="form-group">
-                <label for="isDeal" class="col-sm-2 control-label">物流状态</label>
-                <div class="col-sm-8">
-                    <input type="text" class="form-control" id="isDeal" name="isDeal" placeholder="0为未处理，1为正在处理，2为处理完成">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="time" class="col-sm-2 control-label">是否加急</label>
-                <div class="col-sm-8">
-                    <input type="text" class="form-control" id="time" name="time" placeholder="0为不加急，1为加急">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="Date" class="col-sm-2 control-label">日期</label>
-                <div class="col-sm-8">
-                    <input type="text" class="form-control" id="Date" name="Date" placeholder="寄出日期">
-                </div>
-            </div>
+
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-8" style="text-align: center;">
                     <button type="submit" class="btn btn-success">添加</button>

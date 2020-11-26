@@ -23,5 +23,6 @@ public interface IUserServices {
 	public  medicinebean getMedicineById(String id);
 	public boolean updateProduct(userbean product);
 	public boolean delete(String uid,int isD);
-	public boolean addProduct(productbean product);
+	public boolean medicinedelete(String medicineID,int isD);
+	public boolean addProduct(medicinebean product);
 }
