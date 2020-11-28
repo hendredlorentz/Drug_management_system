@@ -83,7 +83,7 @@
                         <li><a href="productControl" target="_blank">用户列表</a></li>
                         <li><a href="medicineControl" target="_blank">药品介绍</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="warehouseControl.jsp" target="_blank">药品仓库</a></li>
+                        <li><a href="warehouseControl" target="_blank">药品仓库</a></li>
                         <li><a href="Adress.jsp" target="_blank">仓库地址</a></li>
                     </ul>
                 </li>
