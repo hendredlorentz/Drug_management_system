@@ -24,23 +24,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="24f63978-5fd3-448c-8055-2561652e339d" name="默认的" comment="fixup! Default Changelist">
-      <change afterPath="$PROJECT_DIR$/WebContent/warehouseControl.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/edu/itstudy/control/DeleteServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/edu/itstudy/control/addProductServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/edu/itstudy/dao/IUserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/itstudy/dao/IUserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/edu/itstudy/dao/impl/IUserdaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/itstudy/dao/impl/IUserdaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/edu/itstudy/services/IUserServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/itstudy/services/IUserServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/edu/itstudy/services/imlpm/IUserServicesImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/itstudy/services/imlpm/IUserServicesImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/net_Web_exploded/WEB-INF/classes/edu/itstudy/dao/IUserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/net_Web_exploded/WEB-INF/classes/edu/itstudy/dao/IUserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/net_Web_exploded/WEB-INF/classes/edu/itstudy/dao/impl/IUserdaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/net_Web_exploded/WEB-INF/classes/edu/itstudy/dao/impl/IUserdaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/net_Web_exploded/WEB-INF/classes/edu/itstudy/services/IUserServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/net_Web_exploded/WEB-INF/classes/edu/itstudy/services/IUserServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/net_Web_exploded/WEB-INF/classes/edu/itstudy/services/imlpm/IUserServicesImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/net_Web_exploded/WEB-INF/classes/edu/itstudy/services/imlpm/IUserServicesImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/net_Web_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/net_Web_exploded/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/net_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/net_war_exploded/index.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="24f63978-5fd3-448c-8055-2561652e339d" name="默认的" comment="fixup! Default Changelist" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -257,7 +241,7 @@
       <updated>1606491746546</updated>
       <workItem from="1606491757800" duration="278000" />
       <workItem from="1606532972240" duration="5047000" />
-      <workItem from="1606546078255" duration="610000" />
+      <workItem from="1606546078255" duration="946000" />
     </task>
     <servers />
   </component>
