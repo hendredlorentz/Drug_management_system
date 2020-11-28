@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="net:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="24f63978-5fd3-448c-8055-2561652e339d" name="默认的" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebContent/warehouseOK.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/edu/itstudy/bean/warehousebean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/edu/itstudy/control/warehouseInfoServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/edu/itstudy/control/warehouseOfServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/net_Web_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/net_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/warehouseControl.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/itstudy/bean/medicinebean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/itstudy/bean/productbean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/itstudy/bean/userbean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/itstudy/control/DeleteServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/itstudy/control/LoginOutServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/itstudy/control/LoginServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/itstudy/control/RegistServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/itstudy/control/UpdateServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/itstudy/control/addProductServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/itstudy/control/forgetPassword.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/itstudy/control/indexServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/itstudy/control/medicineInfoServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/itstudy/control/productInfoServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/itstudy/control/productOfServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/itstudy/control/userInfoServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/itstudy/dao/IUserDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/itstudy/dao/impl/IUserdaoImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/itstudy/services/IUserServices.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/itstudy/services/imlpm/IUserServicesImp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/edu/itstudy/utils/DBContil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/net.iml" beforeDir="false" afterPath="$PROJECT_DIR$/net.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/net_Web_exploded/WEB-INF/classes/edu/itstudy/dao/IUserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/net_Web_exploded/WEB-INF/classes/edu/itstudy/dao/IUserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/net_Web_exploded/WEB-INF/classes/edu/itstudy/dao/impl/IUserdaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/net_Web_exploded/WEB-INF/classes/edu/itstudy/dao/impl/IUserdaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/net_Web_exploded/WEB-INF/classes/edu/itstudy/services/IUserServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/net_Web_exploded/WEB-INF/classes/edu/itstudy/services/IUserServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/net_Web_exploded/WEB-INF/classes/edu/itstudy/services/imlpm/IUserServicesImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/net_Web_exploded/WEB-INF/classes/edu/itstudy/services/imlpm/IUserServicesImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/net_Web_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/net_Web_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/net_Web_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/net_Web_exploded/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/itstudy/dao/IUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/itstudy/dao/IUserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/itstudy/dao/impl/IUserdaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/itstudy/dao/impl/IUserdaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/itstudy/services/IUserServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/itstudy/services/IUserServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/itstudy/services/imlpm/IUserServicesImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/itstudy/services/imlpm/IUserServicesImp.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="G:\IntelliJ IDEA 2020.2.3\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ksaRNTDqxi35Ld2xJZsq2XXFbK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="构件" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 8.5.59" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.59" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="START_JAVASCRIPT_DEBUGGER" value="true" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="net:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/net" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Tomcat_8_5_59_net" />
+        <option name="HTTP_PORT" value="4930" />
+        <option name="JNDI_PORT" value="1223" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52204" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="net:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.59" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:4930/net/" />
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="START_JAVASCRIPT_DEBUGGER" value="true" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="net:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/net" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_net" />
+        <option name="HTTP_PORT" value="4930" />
+        <option name="JNDI_PORT" value="1223" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52204" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="net:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="24f63978-5fd3-448c-8055-2561652e339d" name="默认的" comment="" />
+      <created>1606491746546</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606491746546</updated>
+      <workItem from="1606491757800" duration="278000" />
+      <workItem from="1606532972240" duration="5047000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="734" y="485" key="#Tomcat_Server" timestamp="1606491855236">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="734" y="485" key="#Tomcat_Server/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1606491855236" />
+    <state x="425" y="244" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606491954238">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="425" y="244" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1606491954238" />
+    <state x="682" y="167" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1606491864013">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="682" y="167" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1606491864013" />
+    <state x="751" y="343" key="FileChooserDialogImpl" timestamp="1606491853935">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="751" y="343" key="FileChooserDialogImpl/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1606491853934" />
+    <state width="1294" height="270" key="GridCell.Tab.0.bottom" timestamp="1606545103507">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1294" height="270" key="GridCell.Tab.0.bottom/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1606545103507" />
+    <state width="1294" height="270" key="GridCell.Tab.0.center" timestamp="1606545103507">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1294" height="270" key="GridCell.Tab.0.center/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1606545103507" />
+    <state width="1294" height="270" key="GridCell.Tab.0.left" timestamp="1606545103507">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1294" height="270" key="GridCell.Tab.0.left/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1606545103507" />
+    <state width="1294" height="270" key="GridCell.Tab.0.right" timestamp="1606545103507">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1294" height="270" key="GridCell.Tab.0.right/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1606545103507" />
+    <state width="1294" height="270" key="GridCell.Tab.1.bottom" timestamp="1606545103508">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1294" height="270" key="GridCell.Tab.1.bottom/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1606545103508" />
+    <state width="1294" height="270" key="GridCell.Tab.1.center" timestamp="1606545103507">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1294" height="270" key="GridCell.Tab.1.center/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1606545103507" />
+    <state width="1294" height="270" key="GridCell.Tab.1.left" timestamp="1606545103507">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1294" height="270" key="GridCell.Tab.1.left/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1606545103507" />
+    <state width="1294" height="270" key="GridCell.Tab.1.right" timestamp="1606545103507">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1294" height="270" key="GridCell.Tab.1.right/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1606545103507" />
+    <state width="1294" height="270" key="GridCell.Tab.2.bottom" timestamp="1606545103508">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1294" height="270" key="GridCell.Tab.2.bottom/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1606545103508" />
+    <state width="1294" height="270" key="GridCell.Tab.2.center" timestamp="1606545103508">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1294" height="270" key="GridCell.Tab.2.center/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1606545103508" />
+    <state width="1294" height="270" key="GridCell.Tab.2.left" timestamp="1606545103508">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1294" height="270" key="GridCell.Tab.2.left/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1606545103508" />
+    <state width="1294" height="270" key="GridCell.Tab.2.right" timestamp="1606545103508">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1294" height="270" key="GridCell.Tab.2.right/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1606545103508" />
+    <state width="1294" height="270" key="GridCell.Tab.3.bottom" timestamp="1606545103508">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1294" height="270" key="GridCell.Tab.3.bottom/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1606545103508" />
+    <state width="1294" height="270" key="GridCell.Tab.3.center" timestamp="1606545103508">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1294" height="270" key="GridCell.Tab.3.center/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1606545103508" />
+    <state width="1294" height="270" key="GridCell.Tab.3.left" timestamp="1606545103508">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1294" height="270" key="GridCell.Tab.3.left/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1606545103508" />
+    <state width="1294" height="270" key="GridCell.Tab.3.right" timestamp="1606545103508">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1294" height="270" key="GridCell.Tab.3.right/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1606545103508" />
+    <state x="451" y="163" key="SettingsEditor" timestamp="1606491794126">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="451" y="163" key="SettingsEditor/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1606491794126" />
+  </component>
+</project>
